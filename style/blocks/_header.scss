@@ -1,0 +1,134 @@
+.header {
+    background-color: #222222;
+    color: white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    position: relative;  // для бургера
+
+    &-wrap {
+        @include flex-center-sp_between;
+    }
+
+    &-col {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $table-bp) {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+}
+.logo-link {
+    text-decoration: none;
+    color: white;
+    margin-right: 41px;
+}
+.search-button, .main-menu-button {
+    background-color: transparent;
+    border: none;
+    fill: #fff;
+    cursor: pointer;
+    // transition: fill 0.3s;
+    @include button-effect;
+}
+.search-button:hover, .main-menu-button:hover {
+    fill: $main-color;
+}
+.registry-link, .cart-link {
+    text-decoration: none;
+    fill: #fff;
+    // transition: fill 0.3s;
+    @include button-effect;
+
+    @media (max-width: $mobile-bp) {
+        display: none;
+    }
+}
+.registry-link {
+    margin: 0 33px;
+}
+.registry-link:hover, .cart-link:hover {
+    fill: $main-color;
+}
+
+// бургер
+.main-nav {
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 77px;
+    right: 0px;
+    height: 765px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    z-index: 1002;
+    width: 232px;
+    padding: 33px;
+    box-sizing: border-box;
+}
+.main-nav-list, .submenu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav-list {
+    display: flex;
+    flex-direction: column;    
+    gap: 20px;
+}
+.submenu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 12px;
+    padding: 0;
+    list-style: none;
+    padding-left: 21px;
+}
+.main-nav-link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.main-nav-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.main-nav-close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.main-nav-close--icon {
+    fill: #6F6E6E;
+
+    &:hover {
+        fill: $main-color;
+        @include button-effect;
+    }
+}
+.main-nav-box {
+    position: relative;
+}
+.submenu-link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+}
+.main-nav-hidden {
+    display: none;
+}

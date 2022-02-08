@@ -1,0 +1,46 @@
+@mixin flex-center-sp_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin box-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin button-effect {
+    transition: background-color 0.3s, color 0.3s, fill 0.3s, transform 0.8s;
+
+    &:hover {
+        transform: scale(1.25); //rotateY(360deg);
+    }
+}
+@mixin button-effect--big {
+    transition: background-color 0.3s, color 0.3s, fill 0.3s, transform 0.8s;
+
+    &:hover {
+        transform: scale(1.4) translateY(-3px); 
+    }
+}
+@mixin text-effect--link {
+    transition: color 0.3s;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+@mixin button-effect--rot {
+    transition: background-color 0.3s, color 0.3s, fill 0.3s, transform 0.8s;
+
+    &:hover {
+        animation: 1s linear 0s normal none infinite running rot;
+    }
+
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

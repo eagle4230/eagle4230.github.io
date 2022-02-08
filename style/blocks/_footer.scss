@@ -1,0 +1,60 @@
+.footer {
+    background-color: #222224;
+
+    &-wrap {
+        flex-direction: row;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        @include flex-center-sp_between;
+
+        @media (max-width: $mobile-bp) {
+            flex-direction: column-reverse;
+            margin-top: 43px;
+            gap: 25px;
+        }
+    }
+
+    &-copyright {
+        font-size: 16px;
+        color: #FBFBFB;
+
+        @media (max-width: $table-bp) {
+            margin-left: 16px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            margin-left: 0;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: $table-bp) {
+            margin-right: 16px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            margin-right: 0;
+        }
+    }
+
+    &-icon-center {
+        text-decoration: none;
+        @include box-size(32px, 32px);
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        fill: #000;
+        // transition: fill 0.3s, background-color 0.3s;
+        @include button-effect--rot;
+
+        &:hover {
+            background-color: $main-color;
+            fill: #fff;
+        }
+    }
+}

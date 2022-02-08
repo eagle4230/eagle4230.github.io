@@ -1,0 +1,70 @@
+.promo {
+    background-color: #F1E4E6;
+
+    &-wrap {
+        height: 765px;
+        background-image: url(../img/promo-bg.png);
+        background-repeat: no-repeat;
+        background-position-x: -225px;
+        background-position-y: bottom;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        @media (max-width: $table-bp) {
+            height: 367px;
+            background-size: contain;
+            background-position-x: -16px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            height: 363px;
+            background-image: none;
+            justify-content: center;
+        }
+    }
+    
+    &-title {
+        font-weight: 900;
+        font-size: $brand-title;
+        color: #222222;
+        border-left: 12px solid $main-color;
+        padding-left: 16px;
+        margin-right: 90px;
+        position: absolute;
+        height: 92px;
+
+        @media (max-width: $table-bp) {
+            font-size: 44px;
+            margin-right: 16px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            font-size: 38px;
+            height: 62px;
+            line-height: 40px;
+            margin-right: 0;
+        }
+    }
+
+    &-title--small {
+        font-weight: bold;
+        font-size: $brand-title - 16px;
+        color: #222222;
+        display: block;
+        line-height: 34px;
+
+        @media (max-width: $table-bp) {
+            font-size: 24px;
+        }
+
+        @media (max-width: $mobile-bp) {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+
+    &-title--pink {
+        color: $main-color;
+    }
+}
